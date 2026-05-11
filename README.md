@@ -1,0 +1,5 @@
+# Decisiones Técnicas
+Se decidió utilizar, aparte de React.js y Typescript, la librería TanStack Query para el hook useQuery, y la librería (...) para graficar. También se desarrolló un pequeño backend en Python y FastAPI para simular una base de datos de documentos, usando el .json entregado. Se decidió realizar un simple sitio web donde se puede seleccionar una métrica a la vez de un dataset a través de un dropdown, y mostrar su gráfico correspondiente. Esto porque se entendió que la mejor forma de visualizar los datos es graficando los días para cada métrica, y se decidió que la forma más conveniente y rápida de permitir seleccionar una métrica es a través de dropdowns. Además, dependiendo de la dirección de la métrica, se muestra un eje Y donde los valores mayores estan más arriba, o los valores menores estan más arriba. Para ahorrar tiempo se pusieron en duro las variables de entorno.
+
+# Segunda Iteración
+Faltaron un filtro por fecha más inteligente, hacer el gráfico más interactivo (por ejemplo, poder hacer zoom), mejorar la UI/UX, así como también estadísticas tales como media o mediana, y que estas pudieran calcularse dentro de rangos de tiempo dados.
