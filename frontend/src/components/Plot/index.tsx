@@ -32,7 +32,7 @@ const PlotQuery = (props: PropsType) => {
     const [endDate, setEndDate] = React.useState<Dayjs | null>(dayjs())
 
     const { status: statusDays, data: dataDays, error: errorDays } = useQuery({
-        queryKey: ['get_collections'],
+        queryKey: ['get_days', props.collection, props.metric],
         queryFn: () => getDays(props.collection, props.metric),
     })
 

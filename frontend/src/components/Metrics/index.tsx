@@ -27,7 +27,7 @@ const DropdownMetrics = (props: PropsType) => {
     };
 
     const { status: statusMetrics, data: dataMetrics, error: errorMetrics } = useQuery({
-        queryKey: ['get_collections'],
+        queryKey: ['get_metrics', props.collection],
         queryFn: () => getMetrics(props.collection),
     })
 
@@ -40,7 +40,7 @@ const DropdownMetrics = (props: PropsType) => {
     return (
         <Box sx={{ minWidth: 120 }}>
         <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Dataset</InputLabel>
+            <InputLabel id="demo-simple-select-label">Métrica</InputLabel>
             <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
